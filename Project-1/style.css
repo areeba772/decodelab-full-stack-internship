@@ -1,0 +1,30 @@
+:root {
+    --mocha-mousse: #A5956F;
+    --ethereal-blue: #A0D4E0;
+    --moonlit-grey: #F2F0EA;
+}
+
+body { margin: 0; font-family: sans-serif; background-color: var(--moonlit-grey); }
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar { background-color: var(--ethereal-blue); border-radius: 20px; }
+.card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Responsive: Mobile k liye */
+@media (max-width: 768px) {
+    .dashboard-container { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+}
